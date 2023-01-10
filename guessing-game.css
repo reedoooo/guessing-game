@@ -1,0 +1,13 @@
+li {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: left;
+}
+body{
+    background-color: #ffb7c5;
+    text-align: center;
+};
+h1{
+    color:black;
+    text-align: center;
+    background-color: rgba(110, 99, 99, 0.3);
+};
