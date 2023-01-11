@@ -3,7 +3,7 @@
 let greeting = prompt('What is your name?')
 alert('hello ' + greeting + ' welcome to my site.')
 
-let question1 = prompt('Is my name Reed?');
+let question1 = prompt('Is my name Reed? (Y/N)');
 if (question1 === ('y').toUpperCase()){
     alert('Correct!');
     console.log('correct')
@@ -20,7 +20,7 @@ if (question1 === ('y').toUpperCase()){
     alert('enter a real answer')
     console.log('false')
 }
-let question2 = prompt('Is my age 30?');
+let question2 = prompt('Is my age 30? (Y/N)');
 if (question2 === ('n').toUpperCase()){
     alert('Correct!');
     console.log('correct')
@@ -37,7 +37,7 @@ if (question2 === ('n').toUpperCase()){
     alert('enter a real answer')
     console.log('false')
 }
-let question3 = prompt('Is my hair long?');
+let question3 = prompt('Is my hair long? (Y/N)');
 if (question3 === ('y').toUpperCase()){
     alert('Correct!');
     console.log('correct')
@@ -54,7 +54,7 @@ if (question3 === ('y').toUpperCase()){
     alert('enter a real answer')
     console.log('false')
 }
-let question4 = prompt('Am I a girl?');
+let question4 = prompt('Am I a girl? (Y/N)');
 if (question4 === ('n').toUpperCase()){
     alert('Correct!');
     console.log('correct')
@@ -71,7 +71,7 @@ if (question4 === ('n').toUpperCase()){
     alert('enter a real answer')
     console.log('false')
 }
-let question5 = prompt('Is my eye color brown?')
+let question5 = prompt('Is my eye color brown? (Y/N)')
 if (question5 === ('y').toUpperCase()){
     alert('Correct!');
     console.log('correct')
