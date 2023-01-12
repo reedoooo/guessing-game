@@ -2,12 +2,31 @@ li {
     font-family: 'Times New Roman', Times, serif;
     text-align: left;
 }
-body{
-    background-color: #ffb7c5;
+
+body {
+    background-color: #FFCAD4;
     text-align: center;
-};
-h1{
-    color:black;
+}
+
+
+h1 {
     text-align: center;
+    -webkit-text-stroke: .5px darkgrey;
+    position: relative;
+    bottom: 20px;
+}
+
+header {
     background-color: rgba(110, 99, 99, 0.3);
-};
+    border: thin solid black;
+}
+
+input {
+    border-radius: 25px;
+    padding: 5px;
+    background-color: rgba(110, 99, 99, 0.3);
+}
+
+input:hover {
+    background-color: rgba(110, 99, 99, 0.7);
+}
