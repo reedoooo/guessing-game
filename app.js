@@ -1,94 +1,136 @@
 'use strict';
 
-let greeting = prompt('What is your name?')
-alert('hello ' + greeting + ' welcome to my site.')
+let greeting = prompt('What is your name?');
+alert('hello ' + greeting + ' welcome to my site.');
 
-let question1 = prompt('Is my name Reed? (Y/N)');
-if (question1 === ('y').toUpperCase()){
-    alert('Correct!');
-    console.log('correct')
-} else if (question1 === ('y').toLowerCase()){
-    alert('Wrong case')
-    console.log('false')
-} else if (question1 === 'n'.toUpperCase()){
-    alert('Wrong Answer')
-    console.log('false')
-} else if (question1 === 'n'.toLowerCase()){
-    alert('Wrong Answer, wrong case')
-    console.log('false')
-} else {
-    alert('enter a real answer')
-    console.log('false')
-}
-let question2 = prompt('Is my age 30? (Y/N)');
-if (question2 === ('n').toUpperCase()){
-    alert('Correct!');
-    console.log('correct')
-} else if (question2 === ('n').toLowerCase()){
-    alert('Wrong case')
-    console.log('false')
-} else if (question2 === 'y'.toUpperCase()){
-    alert('Wrong Answer')
-    console.log('false')
-} else if (question2 === 'y'.toLowerCase()){
-    alert('Wrong Answer, wrong case')
-    console.log('false')
-} else {
-    alert('enter a real answer')
-    console.log('false')
-}
-let question3 = prompt('Is my hair long? (Y/N)');
-if (question3 === ('y').toUpperCase()){
-    alert('Correct!');
-    console.log('correct')
-} else if (question3 === ('y').toLowerCase()){
-    alert('Wrong case')
-    console.log('false')
-} else if (question3 === 'n'.toUpperCase()){
-    alert('Wrong Answer')
-    console.log('false')
-} else if (question3 === 'n'.toLowerCase()){
-    alert('Wrong Answer, wrong case')
-    console.log('false')
-} else {
-    alert('enter a real answer')
-    console.log('false')
-}
-let question4 = prompt('Am I a girl? (Y/N)');
-if (question4 === ('n').toUpperCase()){
-    alert('Correct!');
-    console.log('correct')
-} else if (question4 === ('n').toLowerCase()){
-    alert('Wrong case')
-    console.log('false')
-} else if (question4 === 'y'.toUpperCase()){
-    alert('Wrong Answer')
-    console.log('false')
-} else if (question4 === 'y'.toLowerCase()){
-    alert('Wrong Answer, wrong case')
-    console.log('false')
-} else {
-    alert('enter a real answer')
-    console.log('false')
-}
-let question5 = prompt('Is my eye color brown? (Y/N)')
-if (question5 === ('y').toUpperCase()){
-    alert('Correct!');
-    console.log('correct')
-} else if (question5 === ('y').toLowerCase()){
-    alert('Wrong case')
-    console.log('false')
-} else if (question5 === 'n'.toUpperCase()){
-    alert('Wrong Answer')
-    console.log('false')
-} else if (question5 === 'n'.toLowerCase()){
-    alert('Wrong Answer, wrong case')
-    console.log('false')
-} else {
-    alert('enter a real answer')
-    console.log('false')
+let questions = ['Is my name Reed? (Y/N)', 'Is my age 30? (Y/N)', 'Is my hair long? (Y/N)', 'Am I a girl? (Y/N)', 'Is my eye color brown? (Y/N)', 'How many years did I live in Argentina?', 'Name a city that I have lived in'];
+let answers = ['y', 'n', 'y', 'y', 'n', 2, ['Buenos Aires', 'Seattle', 'Twisp', 'Ogden']];
+let response = '';
+let counter = 0;
+
+if(console.log('correct')){
+    counter++;
+    console.log(counter)
 }
 
+function questionOne() {
+
+for (let i = 0; i < questions.length-2; i++){
+    response = prompt(questions[i] + ('answer with "Y" or "N"'));
+    if (response.toUpperCase() === answers[i].toUpperCase()){
+        alert('Correct!');
+        counter++;
+        console.log('correct');
+    } else {
+        alert('Try Again');
+        console.log('try Again');
+    }  
+}
+}
+questionOne();
+
+function functionHigherLower() {
+    let response = prompt(questions[5] + 'Answer with Numbers');
+    let attempts = 0;
+    let gotIt = false;
+
+    while (!gotIt) {
+        attempts++;
+        if (response == answers[5]) {
+            alert('Correct!');
+            gotIt = true;
+            counter++;
+            console.log('correct');
+            break;
+        }
+
+        if (attempts == 4) {
+            alert('Out of attempts');
+            break;
+        }
+
+        if (response > answers[5]) {
+            alert('Too High!');
+            response = prompt(questions[5] + 'Answer with Numbers');
+        } else {
+            (response < answers[5])
+            alert('Too Low!');
+            response = prompt(questions[5] + 'Answer with Numbers');
+        }
+    }
+
+}
+functionHigherLower();
+
+function functionCityGuess() {
+    let response = prompt(questions[6] + 'Answer with a City');
+    let attempts = 0;
+    let gotIt = false;
+    guesses: while (attempts != 7) {
+        attempts++;
+        console.log(attempts);
+        for (let i = 0; i < answers[6].length; i++) {
+            console.log(answers[6][i]);
+            if (response.toLowerCase() == answers[6][i].toLowerCase()) {
+                //attempts++;
+                alert('Correct!');
+                console.log('correct')
+                counter++;
+                break guesses
+            }
+        }
+        response = prompt( 'try again');
+    }
+    if(attempts == 7){
+        alert('run out of atttempts');
+    }
+}
+functionCityGuess();
+
+alert('You got ' + counter + ' answers correct');
+/*
+for (let i = 0; i < questions.length; i++){
+    if (response === answers[6[0]] || response === answers[6[1]] || response === answers[6[2]]){
+        alert('Correct');
+    } else if(i === answers[6[0,1,2]] && response > answers[6[0,1,2]]){
+        alert('Too high')
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+
+    } else if(i === 6[0,1,2] && response < answers[6[0,1,2]]){
+        alert('Too low')
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+        prompt(questions[i] + ('answer with "Y" or "N"'));
+    }
+}
+
+*/
+/*
+response2 = prompt('How many years did I live in Argentina?');
+    let n = '2';
+    while(n == response2){
+        if(n == response2){
+            
+        }
+        n++;
+
+    }
+*/
+/*
+questionSeven = function(){
+
+}
+questionSeven();
 alert('goodbye ' + greeting + ' thanks for playing')
 /*
 if(answer1 !== answer1){
