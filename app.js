@@ -86,6 +86,7 @@ function functionCityGuess() {
     }
     if(attempts == 7){
         alert('run out of atttempts');
+        
     }
 }
 
