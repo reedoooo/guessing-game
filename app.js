@@ -8,10 +8,15 @@ let answers = ['y', 'n', 'y', 'y', 'n', 2, ['Buenos Aires', 'Seattle', 'Twisp', 
 let response = '';
 let counter = 0;
 
-if(console.log('correct')){
+/*if(console.log('correct')){
     counter++;
-    console.log(counter)
-}
+    console.log(counter);
+}*/
+
+questionOne();
+functionHigherLower();
+functionCityGuess();
+
 
 function questionOne() {
 
@@ -27,7 +32,6 @@ for (let i = 0; i < questions.length-2; i++){
     }  
 }
 }
-questionOne();
 
 function functionHigherLower() {
     let response = prompt(questions[5] + 'Answer with Numbers');
@@ -60,12 +64,11 @@ function functionHigherLower() {
     }
 
 }
-functionHigherLower();
 
 function functionCityGuess() {
     let response = prompt(questions[6] + 'Answer with a City');
     let attempts = 0;
-    let gotIt = false;
+
     guesses: while (attempts != 7) {
         attempts++;
         console.log(attempts);
@@ -84,9 +87,10 @@ function functionCityGuess() {
     if(attempts == 7){
         alert('run out of atttempts');
     }
-    alert('You got ' + counter + ' answers correct');
 }
-functionCityGuess();
+
+alert('You got ' + counter + ' answers correct');
+
 
 /*
 for (let i = 0; i < questions.length; i++){
