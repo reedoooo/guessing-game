@@ -3,7 +3,7 @@
 let greeting = prompt('What is your name?');
 alert('hello ' + greeting + ' welcome to my site.');
 
-let questions = ['Is my name Reed? (Y/N)', 'Is my age 30? (Y/N)', 'Is my hair long? (Y/N)', 'Am I a girl? (Y/N)', 'Is my eye color brown? (Y/N)', 'How many years did I live in Argentina?', 'Name a city that I have lived in'];
+let questions = ['Is my name Reed?', 'Is my age 30?', 'Is my hair long?', 'Am I a girl?', 'Is my eye color brown?', 'How many years did I live in Argentina? ', 'Name a city that I have lived in '];
 let answers = ['y', 'n', 'y', 'y', 'n', 2, ['Buenos Aires', 'Seattle', 'Twisp', 'Ogden']];
 let response = '';
 let counter = 0;
@@ -21,7 +21,7 @@ functionCityGuess();
 function questionOne() {
 
 for (let i = 0; i < questions.length-2; i++){
-    response = prompt(questions[i] + ('answer with "Y" or "N"'));
+    response = prompt(questions[i] + (' Answer with "Y" or "N"'));
     if (response.toUpperCase() === answers[i].toUpperCase()){
         alert('Correct!');
         counter++;
@@ -86,7 +86,7 @@ function functionCityGuess() {
     }
     if(attempts == 7){
         alert('run out of atttempts');
-        
+
     }
 }
 
