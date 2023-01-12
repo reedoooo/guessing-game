@@ -84,10 +84,10 @@ function functionCityGuess() {
     if(attempts == 7){
         alert('run out of atttempts');
     }
+    alert('You got ' + counter + ' answers correct');
 }
 functionCityGuess();
 
-alert('You got ' + counter + ' answers correct');
 /*
 for (let i = 0; i < questions.length; i++){
     if (response === answers[6[0]] || response === answers[6[1]] || response === answers[6[2]]){
